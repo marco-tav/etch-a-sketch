@@ -7,3 +7,7 @@ The Project is part of the Javascript section of the Foundations course of The O
 ## Running it
 
 To run Etch-a-Sketch (still a work-in-progress) just download the repository and run ```index.html``` in a browser. Once the project is finished I'll host it in GitHub so the repository doesn't need to be downloaded to run it.
+
+## Status 
+
+Work in progress. Still everything to be done.
