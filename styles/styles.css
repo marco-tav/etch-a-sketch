@@ -15,8 +15,25 @@ body {
 .text {
     width: 720px;
     border-right: 7px dashed #000000;
+    padding-left: 15px;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+.container {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .etch-a-sketch {
-    width: 1200px;
+    height: 900px;
+    width: 900px;
+    display: grid;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #ffaf7d;
 }
