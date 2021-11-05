@@ -28,14 +28,14 @@ h1 {
     font-size: 60px;
 }
 
-.container {
+.etch-a-sketch {
     width: 1320px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.etch-a-sketch {
+.grid-container {
     height: 904px;
     width: 904px;
     border: 2px solid black;
