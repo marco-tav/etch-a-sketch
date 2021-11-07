@@ -44,7 +44,11 @@ h1 {
 }
 
 .clear-screen:hover {
-    color: #454545;
+    color: #2e2e2e;
+}
+
+.clear-screen:active {
+    color: #525252;
 }
 
 .clear-screen:focus {
