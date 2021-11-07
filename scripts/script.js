@@ -1,14 +1,24 @@
-// Grid creation
-let n = 16;
-let amount = n**2;
+//--------------------------- FUNCTION DECLARATIONS -----------------------------
+//-------------------------------------------------------------------------------
 
-const gridContainer = document.querySelector('.grid-container');      
+function createGrid(n) {
+    let amount = n**2;
 
-for (let i = 0; i < amount; i++) {
-    const cell = document.createElement('div');
-    cell.setAttribute('class', 'cell');
-    gridContainer.appendChild(cell);
+    const gridContainer = document.querySelector('.grid-container');      
+
+    for (let i = 0; i < amount; i++) {
+        const cell = document.createElement('div');
+        cell.setAttribute('class', 'cell');
+        gridContainer.appendChild(cell);
+    }
 }
+
+
+//------------------------------ EXECUTION --------------------------------------
+//-------------------------------------------------------------------------------
+
+let n = 16;
+createGrid(n);  
 
 // Grid changes color on mouseover
 const cells = document.querySelectorAll('.cell');
@@ -27,4 +37,6 @@ clearScreen.addEventListener('click', () => {
     cells.forEach((cell) => {
         cell.classList.remove('drawing');
     })
+
+    let number = window.prompt('How many cells in each side do you want?', 16);
 })
