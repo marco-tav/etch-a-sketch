@@ -17,14 +17,22 @@ function createGrid(n) {
     }
 }
 
+function deleteGrid() {
+    const gridContainer = document.querySelector('.grid-container');
+    const cells = document.querySelectorAll('.cell');
+
+    cells.forEach((cell) => {
+        gridContainer.removeChild(cell);
+    })
+}
+
 //------------------------------ EXECUTION --------------------------------------
 //-------------------------------------------------------------------------------
 let n=16;
 createGrid(n);  
-
-// Grid changes color on mouseover
 const cells = document.querySelectorAll('.cell');
 
+// Grid changes color on mouseover
 cells.forEach((cell) => {
 
     cell.addEventListener('mouseover', () => {
@@ -41,5 +49,16 @@ clearScreen.addEventListener('click', () => {
     })
 
     numberOfCells = prompt('How many cells per side do you want?', 25);
+    deleteGrid();
     createGrid(numberOfCells);
+
+    // Create new reference to the cells. Attach event lisetener for color change.
+    const newCells = document.querySelectorAll('.cell');
+
+    newCells.forEach((newCell) => {
+
+        newCell.addEventListener('mouseover', () => {
+            newCell.classList.add('drawing');
+        })
+    })
 })
