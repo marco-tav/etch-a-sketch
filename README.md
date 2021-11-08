@@ -10,4 +10,4 @@ To run Etch-a-Sketch (still a work-in-progress) just download the repository and
 
 ## Status 
 
-Work in progress. Still everything to be done.
+Work in progress. Basic version (etch a sketch, including grid reset and resize) works.
