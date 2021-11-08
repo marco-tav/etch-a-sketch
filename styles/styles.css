@@ -32,8 +32,8 @@ h1 {
     align-self: flex-start;
 }
 
-.clear-screen {
-    width: 160px;
+.clear-grid {
+    width: 135px;
     height: 50px;
     background-color: #ff6e14;
     border: none;
@@ -43,15 +43,28 @@ h1 {
     margin-left: 0;
 }
 
-.clear-screen:hover {
+.resize-grid {
+    width: 140px;
+    height: 50px;
+    background-color: #ff6e14;
+    border: none;
+    font-family: "Permanent Marker";
+    font-size: 25px;
+    margin-left: 0;
+}
+
+.resize-grid:hover,
+.clear-grid:hover {
     color: #2e2e2e;
 }
 
-.clear-screen:active {
+.resize-grid:active,
+.clear-grid:active {
     color: #525252;
 }
 
-.clear-screen:focus {
+.resize-grid:focus,
+.clear-grid:focus {
     border: none;
     outline: none;
 }
