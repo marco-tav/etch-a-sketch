@@ -2,22 +2,24 @@
 //-------------------------------------------------------------------------------
 
 function createGrid(n) {
-    let amount = n**2;
+    let cellAmount = n**2;
+    cellHeight = `${900/n}px`;
+    cellWidth = `${900/n}px`;
 
     const gridContainer = document.querySelector('.grid-container');      
 
-    for (let i = 0; i < amount; i++) {
+    for (let i = 0; i < cellAmount; i++) {
         const cell = document.createElement('div');
         cell.setAttribute('class', 'cell');
+        cell.style.width = cellWidth;
+        cell.style.height = cellHeight;
         gridContainer.appendChild(cell);
     }
 }
 
-
 //------------------------------ EXECUTION --------------------------------------
 //-------------------------------------------------------------------------------
-
-let n = 16;
+let n=16;
 createGrid(n);  
 
 // Grid changes color on mouseover
@@ -30,7 +32,7 @@ cells.forEach((cell) => {
     })
 })
 
-// Clear function 
+// Clear button
 const clearScreen = document.querySelector('.clear-screen');
 
 clearScreen.addEventListener('click', () => {
@@ -38,5 +40,6 @@ clearScreen.addEventListener('click', () => {
         cell.classList.remove('drawing');
     })
 
-    let number = window.prompt('How many cells in each side do you want?', 16);
+    numberOfCells = prompt('How many cells per side do you want?', 25);
+    createGrid(numberOfCells);
 })
