@@ -40,19 +40,10 @@ cells.forEach((cell) => {
     })
 })
 
-// Clear grid button
-const clearGrid = document.querySelector('.clear-grid');
+// Clear button
+const clearScreen = document.querySelector('.clear-screen');
 
-clearGrid.addEventListener('click', () => {
-    cells.forEach((cell) => {
-        cell.classList.remove('drawing');
-    })
-})
-
-// Resize grid button
-const resizeGrid = document.querySelector('.resize-grid');
-
-resizeGrid.addEventListener('click', () => {
+clearScreen.addEventListener('click', () => {
     cells.forEach((cell) => {
         cell.classList.remove('drawing');
     })
