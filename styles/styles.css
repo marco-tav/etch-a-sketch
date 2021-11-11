@@ -32,7 +32,7 @@ h1 {
     align-self: flex-start;
 }
 
-.clear-screen {
+.clear-grid {
     width: 160px;
     height: 50px;
     background-color: #ff6e14;
@@ -43,15 +43,15 @@ h1 {
     margin-left: 0;
 }
 
-.clear-screen:hover {
+.clear-grid:hover {
     color: #2e2e2e;
 }
 
-.clear-screen:active {
+.clear-grid:active {
     color: #525252;
 }
 
-.clear-screen:focus {
+.clear-grid:focus {
     border: none;
     outline: none;
 }
@@ -64,17 +64,24 @@ h1 {
 }
 
 .grid-container {
-    height: 904px;
-    width: 904px;
+    height: 850px;
+    width: 850px;
     border: 2px solid black;
     border-radius: 5px;
     background-color: #f2f2f2;
     display: flex;  
-    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.cell-container {
+    border: 0px solid blue;
+    flex: 1 1 auto;
+    display: flex;
 }
 
 .cell {
     border: 1px solid black;
+    flex: 1 1 auto;
 }
 
 .drawing {
