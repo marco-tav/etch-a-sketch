@@ -64,19 +64,24 @@ h1 {
 }
 
 .grid-container {
-    height: 904px;
-    width: 904px;
+    height: 850px;
+    width: 850px;
     border: 2px solid black;
     border-radius: 5px;
     background-color: #f2f2f2;
     display: flex;  
-    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.cell-container {
+    border: 1px solid black;
+    flex: 1 1 auto;
 }
 
 .cell {
-    border: 1px solid black;
+
 }
 
 .drawing {
-    background-color: black;
+
 }
