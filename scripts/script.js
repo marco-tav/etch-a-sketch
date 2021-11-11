@@ -45,3 +45,20 @@ cells.forEach((cell) => {
     })
 })
 
+// Clear and resize button
+const clearGrid = document.querySelector('.clear-grid');
+
+clearGrid.addEventListener('click', () => {
+    const gridSize = prompt('How many cells per side do you want the new grid to have?');
+
+    deleteGrid();
+    createGrid(gridSize);
+
+    const newCells = document.querySelectorAll('.cell');
+
+    newCells.forEach((cell) => {
+        cell.addEventListener('mouseover', () => {
+            cell.classList.add('drawing');
+        })
+    })
+})
