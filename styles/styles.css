@@ -74,7 +74,7 @@ h1 {
 }
 
 .cell-container {
-    border: 1px solid blue;
+    border: 0px solid blue;
     flex: 1 1 auto;
     display: flex;
 }
@@ -85,5 +85,5 @@ h1 {
 }
 
 .drawing {
-
+    background-color: black;
 }

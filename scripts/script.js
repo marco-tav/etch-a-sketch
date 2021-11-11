@@ -1,6 +1,5 @@
 //--------------------------- FUNCTION DECLARATIONS -----------------------------
 //-------------------------------------------------------------------------------
-
 function createGrid(cellsPerSide) {
     const gridContainer = document.querySelector('.grid-container');
 
@@ -32,8 +31,17 @@ function deleteGrid() {
         gridContainer.removeChild(cellContainer);
     })
 }
+
 //------------------------------ EXECUTION --------------------------------------
 //-------------------------------------------------------------------------------
+createGrid(16);
 
+// Cells change color to black on mouseover.
+const cells = document.querySelectorAll('.cell');
 
+cells.forEach((cell) => {
+    cell.addEventListener('mouseover', () => {
+        cell.classList.add('drawing');
+    })
+})
 
