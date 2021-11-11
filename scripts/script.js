@@ -4,7 +4,7 @@
 function createGrid(cellsPerSide) {
     const gridContainer = document.querySelector('.grid-container');
 
-    // Create a column of divs. Inside of each div will go a row of cells. 
+    // Create a column of divs that span the width of the container.
     for (let i = 0; i < cellsPerSide; i++) {
         const cellContainer = document.createElement('div');
         cellContainer.setAttribute('class', 'cell-container');
@@ -13,7 +13,7 @@ function createGrid(cellsPerSide) {
 
     const rowContainers = document.querySelectorAll('.cell-container');
 
-    // Create a row of cells inside each div. This makes up the grid.
+    // Fill each of those divs with cells.
     rowContainers.forEach((rowContainer) => {
         for (let j = 0; j < cellsPerSide; j++) {
             const cell = document.createElement('div');
@@ -26,10 +26,10 @@ function createGrid(cellsPerSide) {
 
 function deleteGrid() {
     const gridContainer = document.querySelector('.grid-container');
-    const cells = document.querySelectorAll('.cell');
+    const cellContainers = document.querySelectorAll('.cell-container');
 
-    cells.forEach((cell) => {
-        gridContainer.removeChild(cell);
+    cellContainers.forEach((cellContainer) => {
+        gridContainer.removeChild(cellContainer);
     })
 }
 //------------------------------ EXECUTION --------------------------------------

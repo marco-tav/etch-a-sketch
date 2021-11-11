@@ -74,7 +74,7 @@ h1 {
 }
 
 .cell-container {
-    border: 0px solid black;
+    border: 1px solid blue;
     flex: 1 1 auto;
     display: flex;
 }
