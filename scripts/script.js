@@ -32,18 +32,24 @@ function deleteGrid() {
     })
 }
 
+function cellColorChange(cells) {
+    cells.forEach((cell) => {
+        cell.addEventListener('mousedown', () => {
+            cells.forEach((cell) => {
+                cell.addEventListener('mouseover', () => {
+                    cell.classList.add('drawing');
+                })
+            })
+        })
+    })
+}
+
 //------------------------------ EXECUTION --------------------------------------
 //-------------------------------------------------------------------------------
 createGrid(16);
 
-// Cells change color to black on mouseover.
 const cells = document.querySelectorAll('.cell');
-
-cells.forEach((cell) => {
-    cell.addEventListener('mouseover', () => {
-        cell.classList.add('drawing');
-    })
-})
+cellColorChange(cells);
 
 // Clear and resize button
 const clearGrid = document.querySelector('.clear-grid');
@@ -54,11 +60,7 @@ clearGrid.addEventListener('click', () => {
     deleteGrid();
     createGrid(gridSize);
 
+    // A reference to the new cells needs to be created for color change to work.
     const newCells = document.querySelectorAll('.cell');
-
-    newCells.forEach((cell) => {
-        cell.addEventListener('mouseover', () => {
-            cell.classList.add('drawing');
-        })
-    })
+    cellColorChange(newCells);
 })
