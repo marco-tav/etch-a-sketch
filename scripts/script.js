@@ -32,6 +32,10 @@ function deleteGrid() {
     })
 }
 
+function addDrawingClass() {
+    cell.classList.add('drawing');
+}
+
 function cellColorChange(cells) {
     cells.forEach((cell) => {
         cell.addEventListener('mousedown', () => {
