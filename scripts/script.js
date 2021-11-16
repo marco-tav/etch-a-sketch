@@ -32,6 +32,10 @@ function deleteGrid() {
     })
 }
 
+function randomArrayIndex() {
+    let randomNumber = Math.floor(Math.random()*16);
+    return randomNumber;
+}
 //------------------------------ EXECUTION --------------------------------------
 //-------------------------------------------------------------------------------
 createGrid(16);

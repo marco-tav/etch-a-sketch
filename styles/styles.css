@@ -80,7 +80,7 @@ h1 {
 }
 
 .cell {
-    border: 1px solid black;
+    border: 0px solid black;
     flex: 1 1 auto;
 }
 
