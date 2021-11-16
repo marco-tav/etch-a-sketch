@@ -34,7 +34,23 @@ function deleteGrid() {
 
 function randomArrayIndex() {
     let randomNumber = Math.floor(Math.random()*16);
+    
     return randomNumber;
+}
+
+function randomHexCode() {
+    const hexDigitArray = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
+
+    let randomIndex;
+    let randomHex = '';
+
+    for (let i = 0; i < 6; i++) {
+        randomIndex = randomArrayIndex();
+        randomHexDigit = hexDigitArray[randomIndex];
+        randomHex += randomHexDigit;
+    }
+
+    return randomHex;
 }
 //------------------------------ EXECUTION --------------------------------------
 //-------------------------------------------------------------------------------
