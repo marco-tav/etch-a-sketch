@@ -32,6 +32,7 @@ function deleteGrid() {
     })
 }
 
+// Generates a random array index from 0 to 15.
 function randomArrayIndex() {
     let randomNumber = Math.floor(Math.random()*16);
     
@@ -42,7 +43,7 @@ function randomHexCode() {
     const hexDigitArray = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
 
     let randomIndex;
-    let randomHex = '';
+    let randomHex = '#';
 
     for (let i = 0; i < 6; i++) {
         randomIndex = randomArrayIndex();
@@ -61,7 +62,7 @@ const cells = document.querySelectorAll('.cell');
 
 cells.forEach((cell) => {
     cell.addEventListener('mouseover', () => {
-        cell.classList.add('drawing');
+        cell.style.background = randomHexCode();
     })
 })
 
@@ -78,7 +79,7 @@ clearGrid.addEventListener('click', () => {
 
     newCells.forEach((cell) => {
         cell.addEventListener('mouseover', () => {
-            cell.classList.add('drawing');
+            cell.style.background = randomHexCode();
         })
     })
 })
