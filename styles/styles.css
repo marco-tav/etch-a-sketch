@@ -32,28 +32,38 @@ h1 {
     align-self: flex-start;
 }
 
-.clear-grid {
-    width: 160px;
-    height: 50px;
+.button {
     background-color: #ff6e14;
     border: none;
     font-family: "Permanent Marker";
     font-size: 25px;
-    margin-top: auto;
     margin-left: 0;
 }
 
-.clear-grid:hover {
+.button:hover {
     color: #2e2e2e;
 }
 
-.clear-grid:active {
+.button:active {
     color: #525252;
 }
 
-.clear-grid:focus {
+.button:focus {
     border: none;
     outline: none;
+}
+
+#standard-mode {
+    margin-top: auto;
+}
+
+#grayscale-mode {
+    margin-bottom: 25px;
+}
+
+#clear-grid {
+    width: 160px;
+    height: 50px;
 }
 
 .etch-a-sketch {
@@ -80,7 +90,7 @@ h1 {
 }
 
 .cell {
-    border: 1px solid black;
+    border: 0px solid black;
     flex: 1 1 auto;
 }
 
