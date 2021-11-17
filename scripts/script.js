@@ -32,8 +32,7 @@ function deleteGrid() {
     })
 }
 
-// Generates a random array index from 0 to 15.
-function randomArrayIndex() {
+function randomArrayIndex() { // Generates a random array index from 0 to 15.
     let randomNumber = Math.floor(Math.random()*16);
     
     return randomNumber;
@@ -53,9 +52,11 @@ function randomHexCode() {
 
     return randomHex;
 }
+
 //------------------------------ EXECUTION --------------------------------------
 //-------------------------------------------------------------------------------
-createGrid(16);
+
+createGrid(25);
 
 // Cells change color to black on mouseover.
 const cells = document.querySelectorAll('.cell');
