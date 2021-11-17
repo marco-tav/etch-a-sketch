@@ -68,7 +68,7 @@ cells.forEach((cell) => {
 })
 
 // Clear and resize button
-const clearGrid = document.querySelector('.clear-grid');
+const clearGrid = document.querySelector('#clear-grid');
 
 clearGrid.addEventListener('click', () => {
     const gridSize = prompt('How many cells per side do you want the new grid to have?');
