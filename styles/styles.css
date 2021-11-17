@@ -78,7 +78,7 @@ h1 {
     width: 850px;
     border: 2px solid black;
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     display: flex;  
     flex-direction: column;
 }
