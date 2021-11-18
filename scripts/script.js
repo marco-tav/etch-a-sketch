@@ -53,9 +53,14 @@ function randomHexCode() {
     return randomHex;
 }
 
+function blackAndWhite(node) {
+    node.classList.add('drawing');
+}
+
 function fiestaColors(node) {
     node.style.background = randomHexCode();
 }
+
 //------------------------------ EXECUTION --------------------------------------
 //-------------------------------------------------------------------------------
 
