@@ -107,9 +107,9 @@ const fiestaMode = document.querySelector('#fiesta-mode');
 fiestaMode.addEventListener('click', () => {
     modeIndicator.textContent = 'Fiesta';
 
-    const newCellsAgain = document.querySelectorAll('.cell');
+    const fiestaCells = document.querySelectorAll('.cell');
 
-    newCellsAgain.forEach((cell) => {
+    fiestaCells.forEach((cell) => {
         cell.removeEventListener('mouseover', () => {
             blackAndWhite(cell);
         })
