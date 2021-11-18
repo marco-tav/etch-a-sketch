@@ -69,8 +69,13 @@ h1 {
 .etch-a-sketch {
     width: 1320px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
+}
+
+#mode-indicator {
+    font-size: 40px;
 }
 
 .grid-container {

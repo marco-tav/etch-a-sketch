@@ -61,6 +61,12 @@ function fiestaColors(node) {
     node.style.background = randomHexCode();
 }
 
+function grayScale(alpha, node) {
+    alpha += 0.1;
+    node.style.background = `rgba(0, 0, 0, ${alpha}`;
+    return alpha;
+}
+
 //------------------------------ EXECUTION --------------------------------------
 //-------------------------------------------------------------------------------
 
@@ -71,7 +77,7 @@ const cells = document.querySelectorAll('.cell');
 
 cells.forEach((cell) => {
     cell.addEventListener('mouseover', () => {
-        fiestaColors(cell);
+        blackAndWhite(cell);
     })
 })
 
@@ -87,6 +93,27 @@ clearGrid.addEventListener('click', () => {
     const newCells = document.querySelectorAll('.cell');
 
     newCells.forEach((cell) => {
+        cell.addEventListener('mouseover', () => {
+            blackAndWhite(cell);
+        })
+    })
+})
+
+const modeIndicator = document.querySelector('#mode-indicator');
+
+// Fiesta mode
+const fiestaMode = document.querySelector('#fiesta-mode');
+
+fiestaMode.addEventListener('click', () => {
+    modeIndicator.textContent = 'Fiesta';
+
+    const newCellsAgain = document.querySelectorAll('.cell');
+
+    newCellsAgain.forEach((cell) => {
+        cell.removeEventListener('mouseover', () => {
+            blackAndWhite(cell);
+        })
+
         cell.addEventListener('mouseover', () => {
             fiestaColors(cell);
         })
