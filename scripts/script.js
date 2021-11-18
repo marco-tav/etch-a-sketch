@@ -53,6 +53,9 @@ function randomHexCode() {
     return randomHex;
 }
 
+function fiestaColors(node) {
+    node.style.background = randomHexCode();
+}
 //------------------------------ EXECUTION --------------------------------------
 //-------------------------------------------------------------------------------
 
@@ -63,7 +66,7 @@ const cells = document.querySelectorAll('.cell');
 
 cells.forEach((cell) => {
     cell.addEventListener('mouseover', () => {
-        cell.style.background = randomHexCode();
+        fiestaColors(cell);
     })
 })
 
@@ -80,7 +83,7 @@ clearGrid.addEventListener('click', () => {
 
     newCells.forEach((cell) => {
         cell.addEventListener('mouseover', () => {
-            cell.style.background = randomHexCode();
+            fiestaColors(cell);
         })
     })
 })
