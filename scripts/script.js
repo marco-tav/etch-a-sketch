@@ -83,10 +83,12 @@ cells.forEach((cell) => {
 
 // Clear and resize button
 const clearGrid = document.querySelector('#clear-grid');
+const modeIndicator = document.querySelector('#mode-indicator');
 
 clearGrid.addEventListener('click', () => {
     const gridSize = prompt('How many cells per side do you want the new grid to have?');
-
+    modeIndicator.textContent = 'Standard Mode';
+    
     deleteGrid();
     createGrid(gridSize);
 
@@ -99,23 +101,19 @@ clearGrid.addEventListener('click', () => {
     })
 })
 
-const modeIndicator = document.querySelector('#mode-indicator');
+const standardModeBtn = document.querySelector('#standard-mode');
+const fiestaModeBtn = document.querySelector('#fiesta-mode');
+const grayScaleBtn = document.querySelector('#grayscale-mode');
 
 // Fiesta mode
-const fiestaMode = document.querySelector('#fiesta-mode');
-
-fiestaMode.addEventListener('click', () => {
-    modeIndicator.textContent = 'Fiesta';
+fiestaModeBtn.addEventListener('click', () => {
+    modeIndicator.textContent = 'Fiesta Mode';
 
     const fiestaCells = document.querySelectorAll('.cell');
-
     fiestaCells.forEach((cell) => {
-        cell.removeEventListener('mouseover', () => {
-            blackAndWhite(cell);
-        })
-
         cell.addEventListener('mouseover', () => {
             fiestaColors(cell);
         })
     })
 })
+
