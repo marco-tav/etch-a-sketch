@@ -86,6 +86,7 @@ h1 {
     background-color: #ffffff;
     display: flex;  
     flex-direction: column;
+    margin-bottom: 30px;
 }
 
 .cell-container {
@@ -97,8 +98,4 @@ h1 {
 .cell {
     border: 0px solid black;
     flex: 1 1 auto;
-}
-
-.drawing {
-    background-color: black;
 }

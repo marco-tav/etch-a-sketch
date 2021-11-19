@@ -54,7 +54,7 @@ function randomHexCode() {
 }
 
 function blackAndWhite(node) {
-    node.classList.add('drawing');
+    node.style.background = 'black';
 }
 
 function fiestaColors(node) {
@@ -101,9 +101,22 @@ clearGrid.addEventListener('click', () => {
     })
 })
 
+// Code for mode button from here
 const standardModeBtn = document.querySelector('#standard-mode');
 const fiestaModeBtn = document.querySelector('#fiesta-mode');
 const grayScaleBtn = document.querySelector('#grayscale-mode');
+
+// Standard mode
+standardModeBtn.addEventListener('click', () => {
+    modeIndicator.textContent = 'Standard Mode';
+
+    const standardCells = document.querySelectorAll('.cell');
+    standardCells.forEach((cell) => {
+        cell.addEventListener('mouseover', () => {
+            blackAndWhite(cell);
+        })
+    })
+})
 
 // Fiesta mode
 fiestaModeBtn.addEventListener('click', () => {
@@ -117,3 +130,15 @@ fiestaModeBtn.addEventListener('click', () => {
     })
 })
 
+// Grayscale mode
+grayScaleBtn.addEventListener('click', () => {
+    modeIndicator.textContent = 'Grayscale Mode';
+
+    const grayScaleCells = document.querySelectorAll('.cell');
+    grayScaleCells.forEach((cell) => {
+        let alpha = 0;
+        cell.addEventListener('mouseover', () => {
+            alpha = grayScale(alpha, cell);
+        })
+    })
+})
