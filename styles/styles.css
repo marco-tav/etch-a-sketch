@@ -69,8 +69,13 @@ h1 {
 .etch-a-sketch {
     width: 1320px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
+}
+
+#mode-indicator {
+    font-size: 40px;
 }
 
 .grid-container {
@@ -81,6 +86,7 @@ h1 {
     background-color: #ffffff;
     display: flex;  
     flex-direction: column;
+    margin-bottom: 30px;
 }
 
 .cell-container {
@@ -92,8 +98,4 @@ h1 {
 .cell {
     border: 0px solid black;
     flex: 1 1 auto;
-}
-
-.drawing {
-    background-color: black;
 }
